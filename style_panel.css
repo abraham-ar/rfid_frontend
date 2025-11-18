@@ -1,0 +1,167 @@
+/* ======== Estilos Generales ======== */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f7f9fc;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #1e293b;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h2 {
+  margin: 0;
+}
+
+header button {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+header button:hover {
+  background-color: #dc2626;
+}
+
+/* ======== Menú ======== */
+.menu {
+  background-color: #334155;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.menu button {
+  background-color: #64748b;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.menu button:hover {
+  background-color: #475569;
+}
+
+/* ======== Secciones ======== */
+.section {
+  padding: 20px;
+  margin: 15px auto;
+  max-width: 900px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hidden {
+  display: none;
+}
+
+/* ======== Formularios ======== */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+form input {
+  flex: 1 1 200px;
+  padding: 8px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+}
+
+form button {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+form button:hover {
+  background-color: #1d4ed8;
+}
+
+/* ======== Tablas ======== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table th, table td {
+  border: 1px solid #e2e8f0;
+  padding: 10px;
+  text-align: center;
+}
+
+table th {
+  background-color: #f1f5f9;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+/* ======== Botones de Acción ======== */
+button.aceptar {
+  background-color: #22c55e;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button.aceptar:hover {
+  background-color: #16a34a;
+}
+
+button.rechazar {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button.rechazar:hover {
+  background-color: #dc2626;
+}
+
+/* ======== Tablas Vacías ======== */
+table tbody:empty::before {
+  content: "No hay registros disponibles.";
+  display: block;
+  text-align: center;
+  color: #9ca3af;
+  padding: 10px;
+  font-style: italic;
+}
+
+/* ======== Títulos ======== */
+h3, h4 {
+  color: #1e293b;
+  margin-bottom: 10px;
+}

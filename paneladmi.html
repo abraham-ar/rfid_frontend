@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel Administrador</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h2>Panel del Administrador</h2>
+    <button onclick="logout()">Cerrar sesión</button>
+  </header>
+
+  <nav class="menu">
+    <button onclick="showSection('credenciales')">Gestión de Credenciales</button>
+    <button onclick="showSection('estudiantes')">Gestión de Estudiantes</button>
+    <button onclick="showSection('historial')">Historial de Accesos</button>
+  </nav>
+
+  <main>
+    <!-- Gestión de credenciales -->
+    <section id="credenciales" class="section hidden">
+      <h3>Gestión de Credenciales</h3>
+      <h4>Credenciales Registradas</h4>
+      <table id="tablaCredenciales">
+        <thead>
+          <tr>
+            <th>UID</th>
+            <th>Estado</th>
+            <th>En uso</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <!-- Gestión de estudiantes -->
+    <section id="estudiantes" class="section hidden">
+      <h3>Registro de Estudiantes</h3>
+      <form id="formEstudiante">
+        <input type="text" id="numControl" placeholder="Número de control" required>
+        <input type="text" id="CURP" placeholder="CURP" required>
+        <input type="text" id="nombre" placeholder="Nombre" required>
+        <input type="text" id="apPaterno" placeholder="Apellido paterno" required>
+        <input type="text" id="apMaterno" placeholder="Apellido materno">
+        <input type="text" id="semestre" placeholder="Semestre" required>
+        <input type="text" id="carrera" placeholder="Carrera" required>
+        <button type="submit">Registrar Estudiante</button>
+      </form>
+
+      <h4>Estudiantes Registrados</h4>
+      <table id="tablaEstudiantes">
+        <thead>
+          <tr>
+            <th>N° Control</th>
+            <th>Nombre</th>
+            <th>Credencial Asociada</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <!-- Historial -->
+    <section id="historial" class="section hidden">
+      <h3>Historial de Entradas y Salidas</h3>
+      <table id="tablaHistorial">
+        <thead>
+          <tr>
+            <th>Estudiante</th>
+            <th>Acción</th>
+            <th>Fecha/Hora</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="scri2.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema RFID - Inicio de Sesión</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="login-container">
+    <h1>Control de Acceso RFID</h1>
+    <p>Inicia sesión (modo demostración)</p>
+
+    <form id="loginForm">
+      <label for="role">Tipo de usuario:</label>
+      <select id="role" required>
+        <option value="">Seleccionar</option>
+        <option value="admin">Administrador</option>
+        <option value="student">Estudiante</option>
+      </select>
+
+      <div id="adminFields" class="hidden">
+        <label>Clave de acceso</label>
+        <input type="text" id="adminUser" placeholder="Usuario admin">
+        <label>Contraseña</label>
+        <input type="password" id="adminPass" placeholder="Contraseña">
+      </div>
+
+      <div id="studentFields" class="hidden">
+        <label>Número de control</label>
+        <input type="text" id="studentId" placeholder="Ej. 20231234">
+        <label>CURP</label>
+        <input type="text" id="studentCurp" placeholder="CURP">
+      </div>
+
+      <button type="submit">Entrar</button>
+    </form>
+
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>
