@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         const username = document.getElementById("adminUser").value;
         const password = document.getElementById("adminPass").value;
 
-        url = "http://127.0.0.1:8000/auth/login/admin";
+        url = "http://10.253.79.179:8000/auth/login/admin";
         body.append("username", username);
         body.append("password", password);
 
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         const username = document.getElementById("studentId").value;
         const password = document.getElementById("studentCurp").value;
 
-        url = "http://127.0.0.1:8000/auth/login/estudiante";
+        url = "http://10.253.79.179:8000/auth/login/estudiante";
         body.append("username", username);
         body.append("password", password);
 

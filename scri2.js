@@ -22,7 +22,7 @@ async function renderHistorial() {
   const token = localStorage.getItem("token");
 
   try {
-    const res = await fetch("http://127.0.0.1:8000/registros", {
+    const res = await fetch("http://10.253.79.179:8000/registros", {
       method: "GET",
       headers: { "Authorization": `Bearer ${token}` }
     });
@@ -62,7 +62,7 @@ async function renderHistorial() {
 async function getCredencialesDisponibles() {
   const token = localStorage.getItem("token");
 
-  const res = await fetch("http://127.0.0.1:8000/credencial", {
+  const res = await fetch("http://10.253.79.179:8000/credencial", {
     method: "GET",
     headers: { "Authorization": `Bearer ${token}` }
   });
@@ -84,7 +84,7 @@ async function renderCredenciales() {
 
   const token = localStorage.getItem("token");
 
-  const res = await fetch("http://127.0.0.1:8000/credencial", {
+  const res = await fetch("http://10.253.79.179:8000/credencial", {
     method: "GET",
     headers: { "Authorization": `Bearer ${token}` }
   });
@@ -142,7 +142,7 @@ async function renderEstudiantes() {
 
   const token = localStorage.getItem("token");
   try {
-    const response = await fetch("http://127.0.0.1:8000/estudiante", {
+    const response = await fetch("http://10.253.79.179:8000/estudiante", {
       method: "GET",
       headers: {
         "Authorization": `Bearer ${token}`
@@ -217,7 +217,7 @@ document.addEventListener("click", async (e) => {
   const token = localStorage.getItem("token");
 
   try {
-    const res = await fetch(`http://127.0.0.1:8000/estudiante/${numControl}/credencial`, {
+    const res = await fetch(`http://10.253.79.179:8000/estudiante/${numControl}/credencial`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -263,7 +263,7 @@ if (tablaCred) {
     // Aceptar credencial
     if (e.target.classList.contains("aceptar")) {
       try {
-        const res = await fetch(`http://127.0.0.1:8000/credencial/`, {
+        const res = await fetch(`http://10.253.79.179:8000/credencial/`, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",
@@ -295,7 +295,7 @@ if (tablaCred) {
     // Rechazar credencial
     if (e.target.classList.contains("rechazar")) {
       try {
-        const res = await fetch(`http://127.0.0.1:8000/credencial/`, {
+        const res = await fetch(`http://10.253.79.179:8000/credencial/`, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",
@@ -346,7 +346,7 @@ if (tablaCred) {
       try {
         const token = localStorage.getItem("token");
 
-        const response = await fetch("http://127.0.0.1:8000/estudiante", {
+        const response = await fetch("http://10.253.79.179:8000/estudiante", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

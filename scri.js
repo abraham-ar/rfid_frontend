@@ -18,7 +18,7 @@ async function renderHistorialEstudiante(numControl) {
   const token = localStorage.getItem("token");
 
   try {
-    const res = await fetch(`http://127.0.0.1:8000/registros/estudiante/${numControl}`, {
+    const res = await fetch(`http://10.253.79.179:8000/registros/estudiante/${numControl}`, {
       method: "GET",
       headers: {
         "Authorization": `Bearer ${token}`,
@@ -65,7 +65,7 @@ async function renderHistorialEstudiante(numControl) {
 document.addEventListener("DOMContentLoaded", async () => {
   const token = localStorage.getItem("token");
 
-  const res = await fetch("http://127.0.0.1:8000/auth/me", {
+  const res = await fetch("http://10.253.79.179:8000/auth/me", {
     method: "GET",
     headers: { "Authorization": `Bearer ${token}` }
   });
